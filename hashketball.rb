@@ -46,7 +46,7 @@ end
 end
 
 def team_colors(team)
-  game_hash.each do |team_, team_info|
+  game_hash.each do |team_, team_info| #iterate the hash to find the matching team name then return the color as capitalize words
     if team_info[:team_name] == team
       return team_info[:colors].map(&:capitalize)
     end
