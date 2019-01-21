@@ -38,7 +38,7 @@ end
 def shoe_size(player_name)
   game_hash.each do |team_name, team_info| #iterate the top level of the hash
       team_info[:players].each do |player_|#iterate the symbol :players to get player names and points
-      if player_[:player_name] == player_name #if name matches the argument name then return the points
+      if player_[:player_name] == player_name #if name matches the argument name then return the shoes size
           return player_[:shoe]
       end
     end
