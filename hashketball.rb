@@ -66,5 +66,6 @@ def player_numbers(team)
       #return team_info[:players].map { |player| player[:number] }
     end
   end
+end
 return array
 end
