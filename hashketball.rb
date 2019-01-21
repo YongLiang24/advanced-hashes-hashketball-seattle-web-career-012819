@@ -73,12 +73,12 @@ def player_stats(stats)
   game_hash.each do |team_, team_info|
       team_info[:players].each do |player|
         if player[:player_name] == stats
-          return player.delete_if { |stat, value| [:player_name].include?(stat)}
+          return player.delete_if { |names, stat| [:player_name].include?(names)}#delete the key names and return the stat numbers
         end
       end
     end
 end
 
 def big_shoe_rebounds
-  
+
 end
