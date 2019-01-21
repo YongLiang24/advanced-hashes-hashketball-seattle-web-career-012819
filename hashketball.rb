@@ -54,9 +54,14 @@ def team_colors(team)
 end
 
 def team_names
-  return game_hash.collect {|team, info| info[:team_name]}#return two team names 
+  return game_hash.collect {|team, info| info[:team_name]}#return two team names
 end
 
-def player_numbers
-  
+def player_numbers(team_name)
+  game_hash.each do |home_away, keys|
+    if keys[:team_name] == team_name
+      return keys[:players].map { |player| player[:number] }
+    end
+  end
+
 end
