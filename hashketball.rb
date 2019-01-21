@@ -69,10 +69,10 @@ end
 return array
 end
 
-def player_stats(player)
+def player_stats(stats)
   game_hash.each do |team_, team_info|
-      team_info[:players].each do |player_|
-        if player_[:player_name] == player
+      team_info[:players].each do |player|
+        if player[:player_name] == stats
           return player.delete_if { |stat, value| [:player_name].include?(stat)}
         end
       end
