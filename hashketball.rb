@@ -72,7 +72,7 @@ end
 def player_stats(stats)
   game_hash.each do |home_away, keys|
       keys[:players].each do |player|
-        if player[:player_name] == player_n
+        if player[:player_name] == stats
           return player.delete_if { |stat, value| [:player_name].include?(stat)}
         end
       end
