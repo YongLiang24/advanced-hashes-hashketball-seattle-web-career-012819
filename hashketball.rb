@@ -58,10 +58,11 @@ def team_names
 end
 
 def player_numbers(team)
+  array =[]
   game_hash.each do |team_, team_info|
     if team_info[:team_name] == team
-      return team_info[:players].map { |player| player[:number] }
+      array<< team_info[:players].map { |player| player[:number] }
     end
   end
-
+return array
 end
