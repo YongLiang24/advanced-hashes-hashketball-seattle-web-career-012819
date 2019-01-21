@@ -80,16 +80,16 @@ def player_stats(stats)
 end
 
 def big_shoe_rebounds
-  biggest = 0
-  rebounds = 0
-  game_hash.each do |home_away, keys|
-    keys[:players].each do |player|
+  biggest_size = 0
+  rebound = 0
+  game_hash.each do |team_, team_info|
+    team_info[:players].each do |player|
       size = player[:shoe]
       if size > biggest
-        biggest = size
-        rebounds = player[:rebounds]
+        biggest_size = size
+        rebound = player[:rebounds]
       end
     end
   end
-  rebounds
+  return rebounds
 end
