@@ -74,12 +74,10 @@ def player_stats(player)
   game_hash.each do |team_, team_info|
       team_info[:players].each do |player_|
         if player_[:player_name] == player
-          new_hash.push(player_[:player_name], player_[:number],player_[:shoe],player_[:points],player_[:rebounds],player_[:assists],player_[:steals],player_[:blocks],player_[:slam_dunks])
-
-
-          #return player.delete_if { |stat, value| [:player_name].include?(stat)}
+        #  new_hash.push(player_[:player_name], player_[:number],player_[:shoe],player_[:points],player_[:rebounds],player_[:assists],player_[:steals],player_[:blocks],player_[:slam_dunks])
+        return player.delete_if { |stat, value| [:player_name].include?(stat)}
         end
       end
     end
-    return new_hash
+    #return new_hash
 end
