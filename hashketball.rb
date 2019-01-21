@@ -68,3 +68,7 @@ def player_numbers(team)
 end
 return array
 end
+
+def player_stats
+  
+end
