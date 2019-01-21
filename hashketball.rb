@@ -47,8 +47,8 @@ end
 
 def team_colors(team)
   game_hash.each do |team_, team_info|
-    if keys[:team_name] == team
-      return keys[:colors].map(&:capitalize)
+    if team_info[:team_name] == team
+      return team_info[:colors].map(&:capitalize)
     end
   end
 end
