@@ -58,9 +58,9 @@ def team_names
 end
 
 def player_numbers(team)
-  game_hash.each do |home_away, keys|
-    if keys[:team_name] == team
-      return keys[:players].map { |player| player[:number] }
+  game_hash.each do |team_, team_info|
+    if team_info[:team_name] == team
+      return team_info[:players].map { |player| player[:number] }
     end
   end
 
