@@ -60,10 +60,9 @@ end
 def player_numbers(team)
   array =[]
   game_hash.each do |team_, team_info|
-    if team_info[:team_name] == team
+    if team_info[:team_name] == team #iterate the hash to get number information
       team_info[:players].each do |player_|
-        array.push(player_[:number])
-      #return team_info[:players].map { |player| player[:number] }
+        array.push(player_[:number]) #push the numbers to a new array then return the array
     end
   end
 end
