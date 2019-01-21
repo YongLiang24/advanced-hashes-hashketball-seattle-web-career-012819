@@ -26,8 +26,8 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  game_hash.each do |team_name, team_info|
-      team_info[:players].each do |player_|
+  game_hash.each do |team_name, team_info| #iterate the top level of the hash 
+      team_info[:players].each do |player_|#iterate the symbol :players to get player names and points
         return player_[:points] if player_[:player_name] == player_name
       end
     end
